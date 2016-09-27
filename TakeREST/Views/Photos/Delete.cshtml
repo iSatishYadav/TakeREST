@@ -10,42 +10,51 @@
 <div>
     <h4>Photo</h4>
     <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.AblumID)
-        </dt>
+    <div class="container">
+        <div class="col-xs-6">
 
-        <dd>
-            @Html.DisplayFor(model => model.AblumID)
-        </dd>
+            <dl class="dl-horizontal">
+                <dt>
+                    @Html.DisplayNameFor(model => model.AblumID)
+                </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Title)
-        </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.AblumID)
+                </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.Title)
-        </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.Title)
+                </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Url)
-        </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.Title)
+                </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.Url)
-        </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.Url)
+                </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.ThumbnailUrl)
-        </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.Url)
+                </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.ThumbnailUrl)
-        </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.ThumbnailUrl)
+                </dt>
 
-    </dl>
+                <dd>
+                    @Html.DisplayFor(model => model.ThumbnailUrl)
+                </dd>
 
-    @using (Html.BeginForm()) {
+            </dl>
+        </div>
+        <div class="col-xs-6">
+            <img  src="@Model.ThumbnailUrl" alt="Photo"/>
+        </div>
+    </div>
+
+    @using (Html.BeginForm())
+    {
         @Html.AntiForgeryToken()
 
         <div class="form-actions no-color">

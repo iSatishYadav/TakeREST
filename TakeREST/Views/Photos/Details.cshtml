@@ -9,40 +9,46 @@
 <div>
     <h4>Photo</h4>
     <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.AblumID)
-        </dt>
+    <div class="container">
+        <div class="col-sm-6">
+            <dl class="dl-horizontal">
+                <dt>
+                    @Html.DisplayNameFor(model => model.AblumID)
+                </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.AblumID)
-        </dd>
+                <dd>
+                    @Html.DisplayFor(model => model.AblumID)
+                </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Title)
-        </dt>
+                <dt>
+                    @Html.DisplayNameFor(model => model.Title)
+                </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.Title)
-        </dd>
+                <dd>
+                    @Html.DisplayFor(model => model.Title)
+                </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.Url)
+                </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Url)
-        </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.Url)
+                </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.Url)
-        </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.ThumbnailUrl)
+                </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.ThumbnailUrl)
-        </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.ThumbnailUrl)
+                </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.ThumbnailUrl)
-        </dd>
-
-    </dl>
+            </dl>
+        </div>
+        <div class="col-sm-6">
+            <img src="@Model.ThumbnailUrl" alt="photo" />
+        </div>
+    </div>
 </div>
 <p>
     @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
